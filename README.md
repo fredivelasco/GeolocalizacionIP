@@ -5,12 +5,12 @@ Challenge Tecnico Meli : Geolocalizacion de IPs
 
 1. Construir una aplicación que dada una dirección IP, encuentre el país al que pertenece, y
 muestre:
-● El nombre y código ISO del país
-● Los idiomas oficiales del país
-● Hora(s) actual(es) en el país (si el país cubre más de una zona horaria, mostrar
+- El nombre y código ISO del país
+- Los idiomas oficiales del país
+- Hora(s) actual(es) en el país (si el país cubre más de una zona horaria, mostrar
 todas)
-● Distancia estimada entre Buenos Aires y el país, en km.
-● Moneda local, y su cotización actual en dólares (si está disponible)
+- Distancia estimada entre Buenos Aires y el país, en km.
+- Moneda local, y su cotización actual en dólares (si está disponible)
 
 2. Almacenar  y mostrar  Estadisticas
 
@@ -86,17 +86,19 @@ todas)
   http://localhost:80/
 Esta desplegara la aplicacion frontEnd: que permite la consulta de IP, y tambien visualizar las estadisticas
 
-## ApiRest y EndPoint
+# ApiRest y EndPoint
+
+El mayor esfuerzo del desarrollo se centra  en exponer estos servicios
 
 Si se usa una herramienta como postman se puede  consumir los servicios de la siguiente manera
 
-### Consulta de la Informacion de la IP
+## Consulta de la Informacion de la IP
 GET : http://localhost:8080/api/consulta/108.159.152.1
 
 - Cambiar localhost por la Ip donde se encuentra el container
 - cambiar el valor de la ip segun se requiera
 
-### Consulta de las Estadisticas de la apliacion
+## Consulta de las Estadisticas de la apliacion
 
 GET : http://localhost:8080/api/consulta/estadisticas
  -Cambiar localhost por la Ip donde se encuentra el container
@@ -105,6 +107,7 @@ GET : http://localhost:8080/api/consulta/estadisticas
 - Falto tiempo para hacer la configuración del Swagger, para la documentación de La Api y los dos EndPoints
 - Se evaluo, otras maneras de alimentar la base de datos, con el fin de reducir aun mas el consumo de las apis.
 - Falto configurar una herramienta de monitoreo, como Grafana o Prometheus.
+- Pendiente Configurar el consumo de la ApiRest desde, el FrontEnd.
 
 
 
