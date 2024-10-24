@@ -33,7 +33,7 @@ todas)
 1. ubicarse en el directorio donde se descargara la aplicación 
 
   cd /proyectos/aplicaciones
-  
+
 2. Clonar el proyecto
 
  git clone https://github.com/fredivelasco/GeolocalizacionIP.git
@@ -42,10 +42,13 @@ todas)
 
  cd GeolocalizacionIP
 
- 4. Ejecutar comando Docker
+ 4. Contruir la imagen 
 
-docker build -t geo-ip-app
+docker build -t geo-ip-app .
 
+5. Ejecutar el contenedor
+
+docker run -p 80:80 -p 8080:8080 -p 5432:5432 geo-ip-app
 
 
 
