@@ -31,13 +31,16 @@ ENV POSTGRES_PASSWORD=postgres
 VOLUME ["/var/lib/postgresql/data"]
 
 # Copiar el script de inicialización de la base de datos (si tienes un archivo DDL)
-COPY database/init.sql /docker-entrypoint-initdb.d/
+COPY database/Init_DataBase.sql /docker-entrypoint-initdb.d/
 
 # Exponer el puerto 5432 para PostgreSQL
 EXPOSE 5432
 
 # Etapa final: Unificar servicios
 FROM openjdk:17-jdk-slim AS final
+
+# Actualizar los paquetes e instalar Nginx
+RUN apt-get update && apt-get install -y nginx
 
 # Copiar la configuración de Nginx
 COPY --from=nginx-frontend /usr/share/nginx/html /usr/share/nginx/html
