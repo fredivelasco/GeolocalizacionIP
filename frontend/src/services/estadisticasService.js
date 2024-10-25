@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //const API_URL = "http://172.18.0.3:8080/api/consulta/estadisticas";
-const API_URL = "http://backend:8080/api/consulta/estadisticas";
+const API_URL = "/api/consulta/estadisticas";
 
 export const fetchEstadisticas = async () => {
 
